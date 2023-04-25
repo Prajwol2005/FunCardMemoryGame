@@ -2,7 +2,11 @@ import "./styles.css";
 import { useState } from "react";
 
 function Card(props) {
-  return <div className="Card">{props.letter}</div>;
+  if (props.displayLetter) {
+    return <div className="Card" onClick={props.onClick}>{props.letter}</div>;   
+  } else {
+    return <div className="Card" onClick={props.onClick}>{}</div>; 
+  }
 }
 
 export default function App() {
@@ -35,8 +39,8 @@ export default function App() {
       <h2>Click to see some magic happen!</h2>
 
       <div className="grid">
-        {letters.map(function (letter) {
-          return <Card letter={letter} />;
+        {letters.map(function (letter, index) {
+          return <Card letter={letter} displayLetter = {firstCard === index} onClick={() => setFirstCard(index)} />;
         })}
       </div>
     </div>
