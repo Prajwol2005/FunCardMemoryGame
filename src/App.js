@@ -47,6 +47,11 @@ export default function App() {
     } else if (secondCard === -1) {
       setSecondCard(index);
     } else {
+      console.log(letters[firstCard]);
+      console.log(letters[secondCard]);
+      if (letters[firstCard] === letters[secondCard]) {
+        console.log("Hello world!");
+      }
       setFirstCard(-1);
       setSecondCard(-1);
     }
