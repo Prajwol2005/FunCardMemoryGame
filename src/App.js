@@ -10,8 +10,8 @@ function Card(props) {
 }
 
 export default function App() {
-  const [firstCard, setFirstCard] = useState(-1);
-
+  const [firstCard, setFirstCard] = useState(2);
+  const [secondCard, setSecondCard] = useState(4);
   let letters = [
     "A",
     "A",
@@ -40,7 +40,7 @@ export default function App() {
 
       <div className="grid">
         {letters.map(function (letter, index) {
-          return <Card letter={letter} displayLetter = {firstCard === index} onClick={() => setFirstCard(index)} />;
+          return <Card letter={letter} displayLetter = {firstCard === index || secondCard === index} onClick={() => setFirstCard(index)} />;
         })}
       </div>
     </div>
