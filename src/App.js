@@ -21,6 +21,11 @@ export default function App() {
   const [firstCard, setFirstCard] = useState(-1);
   const [secondCard, setSecondCard] = useState(-1);
 
+let correctPairs = [
+  "C",
+  "D",
+];
+
   let letters = [
     "A",
     "A",
@@ -66,7 +71,7 @@ export default function App() {
           return (
             <Card
               letter={letter}
-              displayLetter={firstCard === index || secondCard === index}
+              displayLetter={firstCard === index || secondCard === index || correctPairs.includes(letter)}
               onClick={() => clickCard(index)}
             />
           );
