@@ -1,6 +1,28 @@
 import "./styles.css";
 import { useState } from "react";
 
+const letters = [
+  "A",
+  "A",
+  "B",
+  "B",
+  "C",
+  "C",
+  "D",
+  "D",
+  "E",
+  "E",
+  "F",
+  "F",
+  "G",
+  "G",
+  "H",
+  "H",
+  "I",
+  "I",
+];
+letters.sort(() => Math.random() - 0.5);
+
 function Card(props) {
   if (props.displayLetter) {
     return (
@@ -20,34 +42,13 @@ function Card(props) {
 export default function App() {
   const [firstCard, setFirstCard] = useState(-1);
   const [secondCard, setSecondCard] = useState(-1);
-
   const [correctPairs, setCorrectPairs] = useState([]);
 
-  let letters = [
-    "A",
-    "A",
-    "B",
-    "B",
-    "C",
-    "C",
-    "D",
-    "D",
-    "E",
-    "E",
-    "F",
-    "F",
-    "G",
-    "G",
-    "H",
-    "H",
-    "I",
-    "I",
-  ];
   function clickCard(index) {
     console.log(index);
     if (firstCard === -1) {
       setFirstCard(index);
-    } else if (secondCard === -1) {
+    } else if (secondCard === -1 && index !== firstCard) {
       setSecondCard(index);
     } else {
       // console.log(letters[firstCard]);
