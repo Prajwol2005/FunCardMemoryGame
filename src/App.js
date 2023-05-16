@@ -21,10 +21,7 @@ export default function App() {
   const [firstCard, setFirstCard] = useState(-1);
   const [secondCard, setSecondCard] = useState(-1);
 
-let correctPairs = [
-  "C",
-  "D",
-];
+  const [correctPairs, setCorrectPairs] = useState([]);
 
   let letters = [
     "A",
@@ -47,15 +44,17 @@ let correctPairs = [
     "I",
   ];
   function clickCard(index) {
+    console.log(index);
     if (firstCard === -1) {
       setFirstCard(index);
     } else if (secondCard === -1) {
       setSecondCard(index);
     } else {
-      console.log(letters[firstCard]);
-      console.log(letters[secondCard]);
+      // console.log(letters[firstCard]);
+      // console.log(letters[secondCard]);
       if (letters[firstCard] === letters[secondCard]) {
-        console.log("Hello world!");
+        correctPairs.push(letters[firstCard]);
+        setCorrectPairs(correctPairs);
       }
       setFirstCard(-1);
       setSecondCard(-1);
@@ -71,7 +70,11 @@ let correctPairs = [
           return (
             <Card
               letter={letter}
-              displayLetter={firstCard === index || secondCard === index || correctPairs.includes(letter)}
+              displayLetter={
+                firstCard === index ||
+                secondCard === index ||
+                correctPairs.includes(letter)
+              }
               onClick={() => clickCard(index)}
             />
           );
