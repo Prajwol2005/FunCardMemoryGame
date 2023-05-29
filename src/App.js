@@ -2,7 +2,6 @@
 //Why did we picked a card Game
 //Go through commit history, go through what challenges we ran into
 //What we could do better or what we would do if we had more time
-
 import "./styles.css";
 import { useState } from "react";
 
@@ -20,7 +19,7 @@ const letters = [
   "https://img.freepik.com/free-vector/camel-doodle-simple-style-white-background_1308-85049.jpg?w=1380&t=st=1684876340~exp=1684876940~hmac=3e27852bb6aeabba987561511b0b8dbcc7016cc936f9e4fd8b118dced440489d",
   "https://img.freepik.com/free-vector/camel-doodle-simple-style-white-background_1308-85049.jpg?w=1380&t=st=1684876340~exp=1684876940~hmac=3e27852bb6aeabba987561511b0b8dbcc7016cc936f9e4fd8b118dced440489d",
   "https://img.freepik.com/free-vector/ostrich-doodle-simple-style-white-background_1308-85145.jpg?t=st=1684876400~exp=1684877000~hmac=5002e3ecdbc2cd3c097ac038bd715e245297e5373e185e3de5cbcbd18c17cbe1",
-  "https://img.freepik.com/free-vector/ostrich-doodle-simple-style-white-background_1308-85145.jpg?t=st=1684876400~exp=1684877000~hmac=5002e3ecdbc2cd3c097ac038bd715e245297e5373e185e3de5cbcbd18c17cbe1https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F18%2Fbe%2Fed%2F18beedc39bbcaed21ec78149778bf5e0.jpg&f=1&nofb=1&ipt=e11aa29415df639c960c259e6be605f6cf9fe8e97805ab2c6b4a6321e3b3d137&ipo=images",
+  "https://img.freepik.com/free-vector/ostrich-doodle-simple-style-white-background_1308-85145.jpg?t=st=1684876400~exp=1684877000~hmac=5002e3ecdbc2cd3c097ac038bd715e245297e5373e185e3de5cbcbd18c17cbe1",
   "https://img.freepik.com/free-vector/cat-doodle-simple-style_1308-90792.jpg?w=900&t=st=1684876374~exp=1684876974~hmac=d8859ecb8faca6f66329a2e5ead59c9e869926c2d94dca66b7d97113e00a7fea",
   "https://img.freepik.com/free-vector/cat-doodle-simple-style_1308-90792.jpg?w=900&t=st=1684876374~exp=1684876974~hmac=d8859ecb8faca6f66329a2e5ead59c9e869926c2d94dca66b7d97113e00a7fea",
   "https://img.freepik.com/free-vector/bird-doodle-simple-style-white-background_1308-90242.jpg?w=1060&t=st=1684876413~exp=1684877013~hmac=aaa07683360cfd78af955f36b59108a7f4730e4e98bb6d6318a49cb79590c783",
@@ -32,12 +31,7 @@ function Card(props) {
   if (props.displayLetter) {
     return (
       <div className="Card" onClick={props.onClick}>
-        <img
-          src={props.letter}
-          alt="Girl in a jacket"
-          width="100px"
-          height="150px"
-        />
+        <img src={props.letter} alt="Amogus" width="100" height="150" />
       </div>
     );
   } else {
