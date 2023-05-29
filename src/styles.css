@@ -1,6 +1,12 @@
+body {
+  background-color: #1560bd;
+  /* background-image: url("https://www.moodfabrics.com/media/catalog/product/cache/97db670f3df31818ced9c267af3eee34/3/0/303341.jpg");*/
+  font-family: cursive;
+  text-align: center;
+  color: #dddddd;
+}
 .App {
-  background-color: #E6E6FA;
-  font-family: sans-serif;
+  padding: 20px;
   text-align: center;
 }
 .grid {
@@ -10,22 +16,25 @@
   gap: 10px;
 }
 .Card {
-  border-style: solid;
-  border-color: #FF6347;
+  border: 3px solid #add8e6;
   border-radius: 20px;
   display: inline-block;
-  width: 100px;
-  height: 150px;
+  width: 120px;
+  height: 180px;
   background: white;
   font-size: 50px;
   text-align: center;
   margin: auto;
+  overflow: hidden;
 }
 
 button {
-  border-color: #FF6347;
+  border: 3px solid #add8e6;
+  border-radius: 10px;
   background-color: white;
   font-size: 16px;
   color: black;
   border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px;
 }
