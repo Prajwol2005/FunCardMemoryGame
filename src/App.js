@@ -1,7 +1,3 @@
-//Start with an interactive demo ie. ask the viewers which cards to click on
-//Why did we picked a card Game
-//Go through commit history, go through what challenges we ran into
-//What we could do better or what we would do if we had more time
 import "./styles.css";
 import { useState } from "react";
 
